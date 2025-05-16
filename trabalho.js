@@ -1,20 +1,19 @@
-// Função para gerar etiquetas de identificação em letras maiúsculas
+// Função pra gerar etiquetas de identificação em letras maiúsculas
 export function geradorDeTagsDeIdentificacao(nome) {
   return nome.toUpperCase();
 }
 
-// Função para verificar se um animal de estimação pode ser adotado com base na idade e no tamanho
+// Função pra verificar se um animal de estimação pode ser adotado c/ base na idade e no tamanho
 export function verificarSePodeSerAdotado(idade, porte) {
   return idade >= 1 && porte === "M";
 }
 
-// Função para calcular o consumo alimentar diário
+// Função pra calcular o consumo alimentar diário onde só peso é utilizado
 export function calcularConsumoDeRacao(nome, idade, peso) {
-  // Cálculo base: 300g por kg de peso
   return Math.round(peso * 300);
 }
 
-// Função para decidir o tipo de atividade com base no tamanho do animal de estimação
+// Função pra decidir o tipo de atividade c/ base no tamanho do animal de estimação
 export function decidirTipoDeAtividadePorPorte(porte) {
   const atividades = {
     pequeno: "brincar dentro de casa",
@@ -24,7 +23,7 @@ export function decidirTipoDeAtividadePorPorte(porte) {
   return atividades[porte.toLowerCase()] || "atividade não definida";
 }
 
-// Função assíncrona para simular busca de dados
+// Função pra simular busca de dados
 export async function buscarDadoAsync() {
   return new Promise((resolve) => {
     setTimeout(() => {
